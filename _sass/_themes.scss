@@ -1,0 +1,84 @@
+/*******************************************************************************
+ * Local theme override — editorial / monochrome refresh
+ * Inspired by makingsoftware.com: monochrome palette + serif body (Newsreader)
+ * with monospace accents (Space Mono). al-folio v1.x: base SCSS is gem-owned;
+ * here we only redefine the tokens/rules we want to change.
+ *
+ * NOTE: `!important` is used on token + font-family declarations so the override
+ * wins regardless of the gem's SCSS import order (additive-override model).
+ ******************************************************************************/
+
+// -- Fonts -------------------------------------------------------------------
+$serif: "Newsreader", Georgia, "Times New Roman", serif;
+$mono: "Space Mono", "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+
+// -- Color tokens: LIGHT ------------------------------------------------------
+:root {
+  --global-bg-color: #ffffff !important;
+  --global-code-bg-color: #f4f4f2 !important;
+  --global-text-color: #141414 !important;
+  --global-text-color-light: #6b6b6b !important;
+  --global-theme-color: #141414 !important; // accent / links -> near-black
+  --global-hover-color: #000000 !important;
+  --global-hover-text-color: #ffffff !important;
+  --global-footer-bg-color: #141414 !important;
+  --global-footer-text-color: #d0d0d0 !important;
+  --global-footer-link-color: #ffffff !important;
+  --global-distill-app-color: #6b6b6b !important;
+  --global-divider-color: rgba(0, 0, 0, 0.1) !important;
+  --global-card-bg-color: #ffffff !important;
+  --global-back-to-top-bg-color: rgba(20, 20, 20, 0.85) !important;
+  --global-back-to-top-text-color: #ffffff !important;
+  --global-newsletter-bg-color: #fafaf8 !important;
+  --global-newsletter-text-color: #141414 !important;
+}
+
+// -- Color tokens: DARK -------------------------------------------------------
+html[data-theme="dark"] {
+  --global-bg-color: #121212 !important;
+  --global-code-bg-color: #1e1e1e !important;
+  --global-text-color: #ededed !important;
+  --global-text-color-light: #9a9a9a !important;
+  --global-theme-color: #ffffff !important; // accent / links -> near-white
+  --global-hover-color: #ffffff !important;
+  --global-hover-text-color: #121212 !important;
+  --global-footer-bg-color: #1a1a1a !important;
+  --global-footer-text-color: #b0b0b0 !important;
+  --global-footer-link-color: #ffffff !important;
+  --global-distill-app-color: #9a9a9a !important;
+  --global-divider-color: rgba(255, 255, 255, 0.12) !important;
+  --global-card-bg-color: #1a1a1a !important;
+  --global-back-to-top-bg-color: rgba(237, 237, 237, 0.85) !important;
+  --global-back-to-top-text-color: #121212 !important;
+  --global-newsletter-bg-color: #1a1a1a !important;
+  --global-newsletter-text-color: #ededed !important;
+}
+
+// -- Typography: serif body + headings ---------------------------------------
+body {
+  font-family: $serif !important;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.profile .name {
+  font-family: $serif !important;
+  letter-spacing: -0.01em;
+}
+
+// -- Monospace accents: code -------------------------------------------------
+code,
+pre,
+kbd,
+tt,
+samp,
+.highlight {
+  font-family: $mono !important;
+}
