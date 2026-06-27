@@ -91,3 +91,49 @@ samp,
 .highlight {
   font-family: $mono !important;
 }
+
+/*******************************************************************************
+ * Editorial polish — monospace nav + section labels, dividers, spacing
+ ******************************************************************************/
+
+// Navigation: monospace, lowercase (kept compact to avoid overflow with many
+// menu items), subtle letter-spacing.
+.navbar-nav .nav-link,
+.dropdown-item {
+  font-family: $mono !important;
+  font-size: 0.74rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+// Section headers as small mono labels with a top divider rule.
+// Covers about (news / selected publications) and publications (year markers).
+h2,
+h2.bibliography {
+  font-family: $mono !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  border-top: 1px solid var(--global-divider-color) !important;
+  padding-top: 0.9rem !important;
+  margin-top: 2.6rem !important;
+}
+
+// CV card section headers (Experience, Education, ...) as mono labels.
+.card-title {
+  font-family: $mono !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-size: 0.9rem !important;
+}
+
+// Hero / page titles stay serif — just tighten a touch.
+.post-title {
+  letter-spacing: -0.015em;
+}
+
+// Profile photo: thin editorial frame.
+.profile img {
+  border: 1px solid var(--global-divider-color);
+}
+
