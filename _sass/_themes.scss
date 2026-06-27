@@ -12,43 +12,52 @@
 $serif: "Newsreader", Georgia, "Times New Roman", serif;
 $mono: "Space Mono", "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
 
+// -- Inha University palette ---------------------------------------------------
+// Inha Blue  (PANTONE 286 C) #0033a0  -> primary accent / links
+// Inha Teal  (PANTONE 313 C) #0090be  -> secondary accent / hover
+$inha-blue: #0033a0;
+$inha-blue-dark: #00205c;
+$inha-blue-light: #6f9bff;
+$inha-teal: #0090be;
+$inha-teal-light: #4cc6dd;
+
 // -- Color tokens: LIGHT ------------------------------------------------------
 :root {
   --global-bg-color: #ffffff !important;
-  --global-code-bg-color: #f4f4f2 !important;
-  --global-text-color: #141414 !important;
-  --global-text-color-light: #6b6b6b !important;
-  --global-theme-color: #141414 !important; // accent / links -> near-black
-  --global-hover-color: #000000 !important;
+  --global-code-bg-color: #eef2fb !important; // faint blue tint
+  --global-text-color: #14171f !important;
+  --global-text-color-light: #6b7280 !important;
+  --global-theme-color: #{$inha-blue} !important; // accent / links -> Inha Blue
+  --global-hover-color: #{$inha-teal} !important; // hover -> Inha Teal
   --global-hover-text-color: #ffffff !important;
-  --global-footer-bg-color: #141414 !important;
-  --global-footer-text-color: #d0d0d0 !important;
+  --global-footer-bg-color: #{$inha-blue-dark} !important; // deep navy footer
+  --global-footer-text-color: #c7d2e8 !important;
   --global-footer-link-color: #ffffff !important;
-  --global-distill-app-color: #6b6b6b !important;
+  --global-distill-app-color: #6b7280 !important;
   --global-divider-color: rgba(0, 0, 0, 0.1) !important;
   --global-card-bg-color: #ffffff !important;
-  --global-back-to-top-bg-color: rgba(20, 20, 20, 0.85) !important;
+  --global-back-to-top-bg-color: rgba(0, 51, 160, 0.9) !important;
   --global-back-to-top-text-color: #ffffff !important;
-  --global-newsletter-bg-color: #fafaf8 !important;
-  --global-newsletter-text-color: #141414 !important;
+  --global-newsletter-bg-color: #f5f8ff !important;
+  --global-newsletter-text-color: #14171f !important;
 }
 
 // -- Color tokens: DARK -------------------------------------------------------
 html[data-theme="dark"] {
   --global-bg-color: #121212 !important;
-  --global-code-bg-color: #1e1e1e !important;
+  --global-code-bg-color: #1b1f29 !important;
   --global-text-color: #ededed !important;
   --global-text-color-light: #9a9a9a !important;
-  --global-theme-color: #ffffff !important; // accent / links -> near-white
-  --global-hover-color: #ffffff !important;
+  --global-theme-color: #{$inha-blue-light} !important; // accent / links -> light Inha Blue
+  --global-hover-color: #{$inha-teal-light} !important; // hover -> light Inha Teal
   --global-hover-text-color: #121212 !important;
-  --global-footer-bg-color: #1a1a1a !important;
-  --global-footer-text-color: #b0b0b0 !important;
+  --global-footer-bg-color: #0a1838 !important; // deep navy footer
+  --global-footer-text-color: #aebbd6 !important;
   --global-footer-link-color: #ffffff !important;
   --global-distill-app-color: #9a9a9a !important;
   --global-divider-color: rgba(255, 255, 255, 0.12) !important;
   --global-card-bg-color: #1a1a1a !important;
-  --global-back-to-top-bg-color: rgba(237, 237, 237, 0.85) !important;
+  --global-back-to-top-bg-color: rgba(111, 155, 255, 0.9) !important;
   --global-back-to-top-text-color: #121212 !important;
   --global-newsletter-bg-color: #1a1a1a !important;
   --global-newsletter-text-color: #ededed !important;

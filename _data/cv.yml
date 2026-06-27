@@ -40,7 +40,7 @@ cv:
         start_date: 2025
         end_date: 2026
         highlights:
-          - Synchrotron-based X-ray CT and PDF characterization for all-solid-state batteries (PI: Prof. Y. Shirley Meng).
+          - "Synchrotron-based X-ray CT and PDF characterization for all-solid-state batteries (PI: Prof. Y. Shirley Meng)."
 
       - company: Samsung SDI Co., Ltd.
         position: Staff Engineer, All-Solid-State Battery Cell Development Group
