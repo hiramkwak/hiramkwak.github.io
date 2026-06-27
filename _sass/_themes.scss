@@ -66,7 +66,8 @@ html[data-theme="dark"] {
 // -- Typography: serif body + headings ---------------------------------------
 body {
   font-family: $serif !important;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -127,13 +128,59 @@ h2.bibliography {
   font-size: 0.9rem !important;
 }
 
-// Hero / page titles stay serif — just tighten a touch.
+/*******************************************************************************
+ * Editorial masthead + reading rhythm
+ ******************************************************************************/
+
+// Masthead: large display-serif page title (applies to all page headers).
 .post-title {
-  letter-spacing: -0.015em;
+  font-size: clamp(2.6rem, 7vw, 4.4rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 500 !important;
 }
 
-// Profile photo: thin editorial frame.
+// Standfirst (about subtitle) — larger, lighter serif with a tight measure.
+.post-header .desc {
+  font-size: 1.18rem !important;
+  line-height: 1.5;
+  max-width: 46ch;
+  margin-top: 1rem;
+  color: var(--global-text-color-light);
+}
+
+// Masthead block: airy top space + a hairline rule separating it from the body.
+.post-header {
+  margin-top: 1rem;
+  padding-bottom: 1.6rem;
+  margin-bottom: 2.6rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// Profile photo: thin editorial frame, grayscale by default → color on hover.
 .profile img {
   border: 1px solid var(--global-divider-color);
+  filter: grayscale(1);
+  transition: filter 0.4s ease;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+// Reading rhythm: comfortable measure + vertical spacing for prose.
+article p {
+  margin-bottom: 1.2rem;
+  max-width: 68ch;
+}
+
+article > ul > li,
+article > ol > li {
+  max-width: 68ch;
+}
+
+// More breathing room above in-page section headings (Research / Join / Contact).
+article h3 {
+  margin-top: 2.4rem;
 }
 
