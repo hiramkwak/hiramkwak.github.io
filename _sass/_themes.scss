@@ -184,3 +184,15 @@ article h3 {
   margin-top: 2.4rem;
 }
 
+// Full-width hero/banner image at the top of the about page.
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: clamp(180px, 28vw, 320px);
+  object-fit: cover;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 2px;
+  margin: 0 0 2.2rem;
+}
+
