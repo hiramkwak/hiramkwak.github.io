@@ -1,0 +1,3 @@
+**Hiram Kwak** is an Assistant Professor in the Department of Chemistry and Chemical Engineering at Inha University. His group works on **all-solid-state batteries** and the **superionic solid electrolytes** at their core, spanning halide/sulfide electrolyte design and synthesis, synchrotron-based structural analysis, and scale-up toward manufacturing.
+
+He received his Ph.D. in Energy Engineering from Hanyang University (advisor: Yoon Seok Jung) and was a postdoctoral researcher at Yonsei University and the University of Chicago (advisor: Y. Shirley Meng), and a researcher at Samsung SDI, before joining Inha University.
